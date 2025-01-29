@@ -12,9 +12,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var ratingAdapter: RatingAdapter
     private lateinit var ratings: MutableList<Float>
     private lateinit var images: List<Int>
-    private lateinit var shopNames: List<String>  // Lista de nombres de las tiendas
-    private lateinit var subtitles: List<String>  // Lista de subtítulos para cada tienda
-
+    private lateinit var shopNames: List<String>
+    private lateinit var subtitles: List<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
