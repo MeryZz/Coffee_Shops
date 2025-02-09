@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Estado inicial -->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/btnSi"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.0"
+            android:scaleY="1.0" />
+
+        <Constraint android:id="@id/btnNo"
+            app:layout_constraintTop_toBottomOf="@id/btnSi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.0"
+            android:scaleY="1.0" />
+    </ConstraintSet>
+
+    <!-- Estado final cuando se pulsa btnSi (se hace más grande) -->
+    <ConstraintSet android:id="@+id/end_edit">
+        <Constraint android:id="@id/btnSi"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </ConstraintSet>
+
+    <!-- Estado final cuando se pulsa btnNo (se hace más grande) -->
+    <ConstraintSet android:id="@+id/end_delete">
+        <Constraint android:id="@id/btnNo"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </ConstraintSet>
+
+    <!-- Transición para btnSi -->
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end_edit"
+        app:duration="500">
+        <OnClick
+            app:targetId="@id/btnSi"
+            app:clickAction="toggle" />
+    </Transition>
+
+    <!-- Transición para btnNo -->
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end_delete"
+        app:duration="500">
+        <OnClick
+            app:targetId="@id/btnNo"
+            app:clickAction="toggle" />
+    </Transition>
+
+</MotionScene>

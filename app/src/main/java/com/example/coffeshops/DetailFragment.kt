@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -23,7 +24,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         val shopImage = arguments?.getInt("shop_image") ?: R.drawable.images
 
         // Acceder a los elementos de la vista
-        val shopNameTextView = view?.findViewById<TextView>(R.id.tvNombre)
+        val shopNameTextView = view?.findViewById<TextView>(R.id.shopNameTextView)
         val imageView = view?.findViewById<ImageView>(R.id.imageView)
 
         // Configurar los elementos de la UI
@@ -36,6 +37,18 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         }
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.btnSi)?.apply {
+            visibility = View.VISIBLE
+        }
+
+        view.findViewById<Button>(R.id.btnNo)?.apply {
+            visibility = View.VISIBLE
+        }
     }
 
     companion object {
