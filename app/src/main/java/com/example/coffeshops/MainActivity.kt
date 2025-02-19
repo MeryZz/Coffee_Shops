@@ -6,15 +6,24 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+/**
+ * Esta actividad principal es la que se muestra al abrir la aplicación.
+ * En ella se muestra una lista de tiendas de café, cada una con una imagen y un nombre,
+ * usando un RecyclerView. Los datos de las tiendas son configurados aquí y se pasan a un adaptador.
+ */
 class MainActivity : AppCompatActivity() {
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var ratingAdapter: RatingAdapter
     private lateinit var ratings: MutableList<Float>
-    private lateinit var images: List<Int>
-    private lateinit var shopNames: List<String>
-    private lateinit var subtitles: List<String>
+    lateinit var images: List<Int>
+    lateinit var shopNames: List<String>
+    lateinit var subtitles: List<String>
 
+    /**
+     * Este método se llama cuando la actividad es creada. Aquí se configura el RecyclerView
+     * y se inicializan los datos necesarios (listas de imágenes, nombres de tiendas, etc.).
+     * Además, se asigna un adaptador al RecyclerView para mostrar los datos de manera correcta.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,5 +57,3 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = ratingAdapter
     }
 }
-
-

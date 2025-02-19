@@ -20,28 +20,43 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("C:/ruta/a/tu/keystore/CoffeShopMery.keystore") // Ruta al archivo keystore
+            storePassword = "MeryCS" // Contraseña del keystore
+            keyAlias = "MeryKey" // Alias de la clave
+            keyPassword = "KeyCS." // Contraseña de la clave
+        }
+    }
+
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release") // Asocia la configuración de firma
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         compose = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"

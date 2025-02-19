@@ -10,8 +10,19 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.transition.TransitionInflater
 
+/**
+ * Este fragmento se encarga de mostrar los detalles de la tienda de café seleccionada,
+ * incluyendo su nombre y una imagen representativa. Además, maneja la animación compartida
+ * entre actividades y la visibilidad de ciertos elementos de la UI.
+ */
 class DetailFragment : Fragment(R.layout.fragment_detail) {
 
+    /**
+     * Este método se ejecuta cuando se crea la vista del fragmento.
+     * Se infla el layout y se recuperan los datos (nombre y imagen) que se pasan a través de un Bundle.
+     * Además, configura los elementos de la interfaz con esos datos.
+     * @return La vista.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,6 +50,10 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         return view
     }
 
+    /**
+     * Este método se llama después de que la vista haya sido completamente creada.
+     * Aquí se configuran ciertos elementos adicionales, como la visibilidad de los botones de la interfaz.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -51,6 +66,11 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         }
     }
 
+    /**
+     * Este método estático se utiliza para crear una nueva instancia de DetailFragment.
+     * A través de un Bundle, se pasan el nombre de la tienda y la imagen a mostrar en el fragmento.
+     * @return El fragmento.
+     */
     companion object {
         // Función para crear una nueva instancia de este fragmento
         fun newInstance(shopName: String, shopImage: Int): DetailFragment {
