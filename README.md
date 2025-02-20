@@ -45,10 +45,10 @@ Hay un plan de pruebas para garantizar la calidad y el rendimiento de la aplicac
 - [Pruebas de Volumen y Estrés](./PRUEBAS_DE_VOLUMEN_Y_ESTRES.md)
 - [Pruebas de Seguridad](./PRUEBAS_DE_SEGURIDAD.md)
 - [Pruebas de Uso](./PRUEBAS_DE_USO.md)
+- [Pruebas Unitarias](./PRUEBAS_UNITARIAS.md)
 
 
 ## 📱 Cómo Ejecutar el Proyecto
 
-1. Clona el repositorio del proyecto.
-2. Abre el proyecto en Android Studio.
-3. Compila y ejecuta la aplicación en el emulador o en un dispositivo Android físico.
+- [Ejecución](./EJECUCION.md) 📖: Ejecución del proyecto CoffeShops.
+- [APK con la firma](https://github.com/MeryZz/Coffee_Shops/tree/master/release)
