@@ -46,7 +46,12 @@ Hay un plan de pruebas para garantizar la calidad y el rendimiento de la aplicac
 - [Pruebas de Seguridad](./PRUEBAS_DE_SEGURIDAD.md)
 - [Pruebas de Uso](./PRUEBAS_DE_USO.md)
 - [Pruebas Unitarias](./PRUEBAS_UNITARIAS.md)
+- [Pruebas de Interfaz](./PRUEBAS_DE_INTERFAZ.md)
+- [Pruebas de Rendimiento](./PRUEBAS_DE_RENDIMIENTO.md)
+- [Pruebas en Dispositivos Reales](./PRUEBAS_EN_DISP_REALES.md)
 
+- [Errores y Mejoras](./ERRORES_Y_MEJORAS.md)
+  
 
 ## 📱 Cómo Ejecutar el Proyecto
 
